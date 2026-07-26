@@ -15,14 +15,14 @@
 
 ## 🏛️ System Architecture & Database Capabilities
 
-```
-┌─────────────────────────────┬───────────────────────────────┬────────────────────────────┐
-│ Relational PostgreSQL Schema│ Row-Level Security (RLS)      │ Deno Edge Functions        │
-├─────────────────────────────┼───────────────────────────────┼────────────────────────────┤
-│ 🗄️ Multi-wallet tracking    │ 🔒 Strict per-user isolation  │ ⚡ Webhook integrations    │
-│ 💳 Linked bank OAuth tokens │ 🛡️ Fine-grained RPC policies   │ 🔑 Plaid / TrueLayer sync  │
-└─────────────────────────────┴───────────────────────────────┴────────────────────────────┘
-```
+| Relational PostgreSQL Schema | Row-Level Security (RLS) | Deno Edge Functions |
+| :--- | :--- | :--- |
+| 🗄️ Multi-wallet tracking | 🔒 Strict per-user isolation | ⚡ Webhook integrations |
+| 💳 Linked bank OAuth tokens | 🛡️ Fine-grained RPC policies | 🔑 Plaid / TrueLayer sync |
+
+---
+
+## ⚡ Technical Highlights
 
 - **Migrations Engine**: 120+ sequential SQL migration scripts ensuring bulletproof schema versioning.
 - **Row-Level Security**: Zero data leakage across tenant accounts enforced at the database kernel level.
