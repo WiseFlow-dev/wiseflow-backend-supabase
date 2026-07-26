@@ -1,47 +1,49 @@
+<p align="center">
+  <img src="architecture_banner.png" alt="Database Architecture Banner" width="100%"/>
+</p>
+
 <h1 align="center">WiseFlow Backend & Supabase Database Architecture</h1>
 
 <p align="center">
-  <b>PostgreSQL schema, database migrations, Row-Level Security (RLS) policies, and serverless Edge Functions for WiseFlow.</b>
+  <b>PostgreSQL schema, database migrations, Row-Level Security (RLS) policies, and serverless Edge Functions.</b>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Database-PostgreSQL-blue.svg" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/Platform-Supabase-emerald.svg" alt="Supabase"/>
-  <img src="https://img.shields.io/badge/Security-Row%20Level%20Security-red.svg" alt="RLS"/>
-  <img src="https://img.shields.io/badge/Runtime-Deno%20%7C%20Edge%20Functions-black.svg" alt="Deno Edge Functions"/>
+  <img src="https://img.shields.io/badge/Database-PostgreSQL%2015-blue?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Platform-Supabase-emerald?style=for-the-badge&logo=supabase&logoColor=3ECF8E" alt="Supabase"/>
+  <img src="https://img.shields.io/badge/Security-Row%20Level%20Security-red?style=for-the-badge&logo=auth0&logoColor=white" alt="RLS"/>
+  <img src="https://img.shields.io/badge/Runtime-Deno%20Edge%20Functions-black?style=for-the-badge&logo=deno&logoColor=white" alt="Deno"/>
 </p>
 
 ---
 
-## 🏛️ Architecture Overview
+## 🏛️ System Architecture & Database Capabilities
 
-This repository contains the backend infrastructure for the WiseFlow personal finance platform:
+```
+┌─────────────────────────────┬───────────────────────────────┬────────────────────────────┐
+│ Relational PostgreSQL Schema│ Row-Level Security (RLS)      │ Deno Edge Functions        │
+├─────────────────────────────┼───────────────────────────────┼────────────────────────────┤
+│ 🗄️ Multi-wallet tracking    │ 🔒 Strict per-user isolation  │ ⚡ Webhook integrations    │
+│ 💳 Linked bank OAuth tokens │ 🛡️ Fine-grained RPC policies   │ 🔑 Plaid / TrueLayer sync  │
+└─────────────────────────────┴───────────────────────────────┴────────────────────────────┘
+```
 
-- **Relational Schema**: Optimized PostgreSQL tables for multi-wallet tracking, categorized transactions, budget rules, and linked bank OAuth tokens.
-- **Row-Level Security (RLS)**: Fine-grained security policies isolating user records at the database level.
-- **Automated Database Migrations**: Sequential SQL migration scripts for schema evolution.
-- **Serverless Edge Functions**: Lightweight Deno TypeScript functions executing webhook triggers and secure API integrations.
-
----
-
-## 🛠️ Tech Stack
-
-- **Supabase CLI**: Migration management & local database emulation
-- **PostgreSQL 15**: Core relational storage engine
-- **Deno / TypeScript**: Edge Functions runtime
+- **Migrations Engine**: 120+ sequential SQL migration scripts ensuring bulletproof schema versioning.
+- **Row-Level Security**: Zero data leakage across tenant accounts enforced at the database kernel level.
+- **Serverless Edge Functions**: Lightweight TypeScript microservices handling webhook callbacks and token exchange.
 
 ---
 
-## 🚀 Local Development
+## 🚀 Local Setup
 
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/WiseFlow-dev/wiseflow-backend-supabase.git
 
-# Start local Supabase container stack
+# Start local Supabase emulation
 supabase start
 
-# Apply database migrations
+# Apply SQL migrations
 supabase db reset
 ```
 
@@ -49,4 +51,4 @@ supabase db reset
 
 ## 📄 License
 
-MIT License. See `LICENSE` for details.
+MIT License © WiseFlow
