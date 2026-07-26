@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="architecture_banner.png" alt="Database Architecture Banner" width="100%"/>
-</p>
-
 <h1 align="center">WiseFlow Backend & Supabase Database Architecture</h1>
 
 <p align="center">
