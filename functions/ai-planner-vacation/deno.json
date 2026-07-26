@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "supabase": "npm:@supabase/supabase-js@2.94.1",
+    "std/": "https://deno.land/std@0.168.0/"
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["no-explicit-any", "no-import-prefix"]
+    }
+  }
+}
